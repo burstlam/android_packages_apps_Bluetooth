@@ -83,6 +83,8 @@
     <string name="notification_receiving">Bluetooth share: Receiving <xliff:g id="file">%1$s</xliff:g></string>
     <!-- label for the notification item of received file -->
     <string name="notification_received">Bluetooth share: Received <xliff:g id="file">%1$s</xliff:g></string>
+    <!-- label for the notification item of failed received file -->
+    <string name="notification_received_fail">Bluetooth share: Received <xliff:g id="file">%1$s</xliff:g> failed</string>
 
     <!-- Outbound File Transfer Progress Notification item -->
     <!-- label for the notification item of sending file -->
@@ -91,6 +93,8 @@
     <string name="notification_sent">Bluetooth share: Sent <xliff:g id="file">%1$s</xliff:g></string>
     <!-- label for the notification item of failed sending file -->
     <string name="notification_sent_fail">Bluetooth share: File <xliff:g id="file">%1$s</xliff:g> not sent</string>
+    <!-- label for the notification item of complete sending file -->
+    <string name="notification_sent_complete">Bluetooth share: File <xliff:g id="file">%1$s</xliff:g> complete</string>
 
     <!-- Bluetooth Download Progress Dialog -->
     <!--Title -->

@@ -60,19 +60,22 @@
                 <data android:mimeType="image/*" />
                 <data android:mimeType="video/*" />
                 <data android:mimeType="audio/*" />
-                <data android:mimeType="x-mixmedia/*" />
-                <data android:mimeType="text/*" />
-                <data android:mimeType="application/*" />
+                <data android:mimeType="text/x-vcard" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="text/html" />
+                <data android:mimeType="application/zip" />
+                <data android:mimeType="application/vnd.ms-excel" />
+                <data android:mimeType="application/msword" />
+                <data android:mimeType="application/vnd.ms-powerpoint" />
+                <data android:mimeType="application/pdf" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND_MULTIPLE" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="image/*" />
                 <data android:mimeType="video/*" />
-                <data android:mimeType="audio/*" />
                 <data android:mimeType="x-mixmedia/*" />
-                <data android:mimeType="text/*" />
-                <data android:mimeType="application/*" />
+                <data android:mimeType="text/x-vcard" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.btopp.intent.action.OPEN" />
@@ -159,6 +162,24 @@
             android:name=".map.BluetoothMasReceiver">
             <intent-filter>
                 <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name=".ftp.BluetoothFtpProvider"
+            android:authorities="com.stericsson.bluetooth.ftp">
+            <path-permission
+                android:path="/btftp"
+                android:permission="android.permission.ACCESS_BLUETOOTH_SHARE" />
+        </provider>
+        <service
+            android:name=".ftp.BluetoothFtpService"
+            android:permission="android.permission.ACCESS_BLUETOOTH_SHARE" >
+        </service>
+        <receiver
+            android:name=".ftp.BluetoothFtpReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
     </application>
